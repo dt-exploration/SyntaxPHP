@@ -2,14 +2,14 @@
 
 //Komentari su definisani sa "//" ili #, vise redova: " /*  */ "
 
-//Deklaracija promenljivih
+//Deklaracija varijabli
 $a=5; $x=10;
-$b="D.T.";
+$b="Dusan";
 
 //Deklaracija metode
 function test()
 {
-    //Koriscenje globalne promeljive u funkciji
+    //Koriscenje globalnih varijabli u funkciji
     global $x;
     global $a;
     echo $x;
@@ -30,22 +30,23 @@ function test()
 //Poziv metode "test"
 test();
 
-//Stampanje (prikaz)
+//Stampanje (prikaz) f-je test echo metodom
 echo test();
 
-//Ispustanje HTML tagova pomocu echo funkcije
+//Prikaz HTML tagova pomocu echo metode
 echo "<h1>DUSAN</h1>";
 
-//Koriscenje funkcije vardump za prikaz tipa podatka (tip: float)
+//Koriscenje metode vardump za prikaz tipa podatka (tip: float)
 var_dump(12.12);
 
 //Duzina stringa strlen metodom
 echo strlen("Prikaz stringa");
 
-//Definisanje konstante (mogu da se koriste u klasama i metodam
+//Definisanje konstante (mogu da se koriste u klasama i metodama)
 define("SPEED",300000);
 echo SPEED;
 
+//If else kontrolna struktura (PSR approved)
 if( date("Y") > 2020) {
     echo "Not";
 
