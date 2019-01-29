@@ -53,13 +53,13 @@ define("SPEED", 300000);
 echo SPEED;
 
 //If-else kontrolna struktura (PSR approved)
-if( date("Y") > 2020) {
+if ( date("Y") > 2020) {
     echo "Not";
 
-}   else if (date("Y") > 2000) {
+} else if ( date("Y") > 2000) {
     echo "Milenijum";
 
-}   else {
+} else {
     echo "Problem sa funkcijom";
 }
 ////////////////////////////////////////////
@@ -67,9 +67,14 @@ if( date("Y") > 2020) {
 //Nizovi (Arrays)
 $niz_integer=array(1,2,3,4,5);
 $niz_string=array("a","10","c","d","e");
-$niz_assoc=array("Rex"=>'26', "Dutja"=>'25', "Ix"=>'24', "Pafi"=>'29');
 $niz_for_sorting=array(6,8,7,3,1,6,0,9,8,9,5,6,4,5,7,3,5,4,9,2,4,0,6,1,5);
+
+$niz_assoc=array("Rex"=>'26', "Dutja"=>'25', "Ix"=>'24', "Pafi"=>'29');
+
 echo count($niz_integer);
+sort($niz_for_sorting);
+rsort($niz_for_sorting);
+print_r($niz_for_sorting);
 
 //Switch kontrolna struktura
 $color="red";
@@ -94,7 +99,7 @@ switch ($color) {
 ////////////////////////////
 
 //While i do..while kontrolna struktura
-while($a<10) {
+while ( $a<10 ) {
     echo "<b>".$a."</b>";
     $a++;
 }
@@ -104,7 +109,7 @@ do {
     echo $ct;
     $ct++;
 
-}   while ($ct<10);
+} while ($ct<10);
 ///////////////////////////////////////
 
 //For i foreach kontrolna struktura
@@ -120,6 +125,23 @@ foreach ( $niz_string as $var) {
     echo $var==10 ?  ("Broj 10<br>") : ("Nije broj 10<br>");
 }
 
-//foreach($niz_assoc as $)
-///////////////////////////////////
+foreach($niz_assoc as $vrednost=>$kljuc) {
+    echo $vrednost;
+    echo $kljuc;
+}
+/////////////////////////////////
+
+//Superglobalne matrice
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+echo "<br>";
+echo $_SERVER['REMOTE_ADDR'];
+echo "<br>";
+
+//Kroz url poslati: .php?a=5, i ubrati preko superglobala _GET
+echo $_GET['a'];
 ?>
