@@ -32,24 +32,24 @@ function param($parametar)
     echo "Ova funkcija je na ulazu dobila parametar:".$parametar;
 }
 
-//Poziv metode "test" i metode param(sa argumentom "ok")
+//Poziv metode test i metode param(sa argumentom "ok")
 test();
 param("ok");
 
-//Stampanje (prikaz) f-je test echo metodom
+//Stampanje (prikaz) metodom ECHO
 echo test();
 
-//Prikaz HTML tagova pomocu echo metode
+//Prikaz HTML-a metodom ECHO
 echo "<h1>DUSAN</h1>";
 
-//Koriscenje metode vardump za prikaz tipa podatka (tip: float)
+//Koriscenje metode var_dump za prikaz tipa podatka (tip: float)
 var_dump(12.12);
 
 //Duzina stringa strlen metodom
 echo strlen("Prikaz stringa");
 
-//Definisanje konstante (mogu da se koriste u klasama i metodama)
-define("SPEED",300000);
+//Definisanje konstante (mogu da se koriste u svim klasama i metodama)
+define("SPEED", 300000);
 echo SPEED;
 
 //If-else kontrolna struktura (PSR approved)
@@ -63,6 +63,13 @@ if( date("Y") > 2020) {
     echo "Problem sa funkcijom";
 }
 ////////////////////////////////////////////
+
+//Nizovi (Arrays)
+$niz_integer=array(1,2,3,4,5);
+$niz_string=array("a","10","c","d","e");
+$niz_assoc=array("Rex"=>'26', "Dutja"=>'25', "Ix"=>'24', "Pafi"=>'29');
+$niz_for_sorting=array(6,8,7,3,1,6,0,9,8,9,5,6,4,5,7,3,5,4,9,2,4,0,6,1,5);
+echo count($niz_integer);
 
 //Switch kontrolna struktura
 $color="red";
@@ -79,21 +86,40 @@ switch ($color) {
     case "green":
     echo "Vasa omiljena boja je zelena";
     break;
+
+    default:
+    echo "Pogresan parametar";
+
 }
 ////////////////////////////
 
 //While i do..while kontrolna struktura
-while($a<10000) {
+while($a<10) {
     echo "<b>".$a."</b>";
     $a++;
 }
 
 $ct=1;
-
 do {
-echo $ct;
-$ct++;
-}
-while ($ct<10000);
+    echo $ct;
+    $ct++;
+
+}   while ($ct<10);
 ///////////////////////////////////////
+
+//For i foreach kontrolna struktura
+for ( $i=0; $i<10; $i++) {
+    echo "<b>DUSAN</b><br>";
+}
+
+foreach ( $niz_string as $var) {
+    echo "<b>$var</b><br>";
+
+    //Logicki operator (ternarni operator)  ?
+    //Izjave NISU void, nego return, potrebno ih je uhvatiti sa echo
+    echo $var==10 ?  ("Broj 10<br>") : ("Nije broj 10<br>");
+}
+
+//foreach($niz_assoc as $)
+///////////////////////////////////
 ?>
