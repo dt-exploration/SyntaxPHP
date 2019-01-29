@@ -27,8 +27,14 @@ function test()
     return 1;
 }
 
-//Poziv metode "test"
+function param($parametar)
+{
+    echo "Ova funkcija je na ulazu dobila parametar:".$parametar;
+}
+
+//Poziv metode "test" i metode param(sa argumentom "ok")
 test();
+param("ok");
 
 //Stampanje (prikaz) f-je test echo metodom
 echo test();
@@ -46,7 +52,7 @@ echo strlen("Prikaz stringa");
 define("SPEED",300000);
 echo SPEED;
 
-//If else kontrolna struktura (PSR approved)
+//If-else kontrolna struktura (PSR approved)
 if( date("Y") > 2020) {
     echo "Not";
 
@@ -56,6 +62,38 @@ if( date("Y") > 2020) {
 }   else {
     echo "Problem sa funkcijom";
 }
+////////////////////////////////////////////
 
+//Switch kontrolna struktura
+$color="red";
+switch ($color) {
 
+    case "red":
+    echo "Vasa omiljena boja je crvena !";
+    break;
+
+    case "blue":
+    echo "Vasa omiljena boja je plava !";
+    break;
+
+    case "green":
+    echo "Vasa omiljena boja je zelena";
+    break;
+}
+////////////////////////////
+
+//While i do..while kontrolna struktura
+while($a<10000) {
+    echo "<b>".$a."</b>";
+    $a++;
+}
+
+$ct=1;
+
+do {
+echo $ct;
+$ct++;
+}
+while ($ct<10000);
+///////////////////////////////////////
 ?>
