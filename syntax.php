@@ -6,6 +6,13 @@
 $a=5; $x=10;
 $b="Dusan";
 
+//Metoda za vreme/datum
+echo "Today is: ".date("l")." ".date("d/m/Y");
+echo "<br>";
+echo "Current time: ";
+echo date("H:i:s");
+echo "<br>";
+
 //Deklaracija metode
 function test()
 {
@@ -32,7 +39,7 @@ function param($parametar)
     echo "Ova funkcija je na ulazu dobila parametar:".$parametar;
 }
 
-//Poziv metode test i metode param(sa argumentom "ok")
+//Poziv metode test i void metode param(sa argumentom "ok")
 test();
 param("ok");
 
@@ -53,10 +60,10 @@ define("SPEED", 300000);
 echo SPEED;
 
 //If-else kontrolna struktura (PSR approved)
-if ( date("Y") > 2020) {
+if (date("Y") > 2020) {
     echo "Not";
 
-} else if ( date("Y") > 2000) {
+} else if (date("Y") > 2000) {
     echo "Milenijum";
 
 } else {
@@ -65,11 +72,15 @@ if ( date("Y") > 2020) {
 ////////////////////////////////////////////
 
 //Nizovi (Arrays)
-$niz_integer=array(1,2,3,4,5);
-$niz_string=array("a","10","c","d","e");
-$niz_for_sorting=array(6,8,7,3,1,6,0,9,8,9,5,6,4,5,7,3,5,4,9,2,4,0,6,1,5);
+$niz_integer=array(1, 2, 3, 4, 5);
+$niz_string=array("a", "10", "c", "d", "e");
+$niz_for_sorting=array(6, 8, 7, 3, 1, 6, 0, 9, 8, 9, 5, 6, 4, 5, 7,
+                       3, 5, 4, 9, 2, 4, 0, 6, 1, 5);
 
 $niz_assoc=array("Rex"=>'26', "Dutja"=>'25', "Ix"=>'24', "Pafi"=>'29');
+
+$matrica=array(array(1,2,3,4,5),array(9,8,7,6,5));
+echo $matrica[1][2];
 
 echo count($niz_integer);
 sort($niz_for_sorting);
@@ -81,25 +92,25 @@ $color="red";
 switch ($color) {
 
     case "red":
-    echo "Vasa omiljena boja je crvena !";
-    break;
+        echo "Vasa omiljena boja je crvena !";
+        break;
 
     case "blue":
-    echo "Vasa omiljena boja je plava !";
-    break;
+        echo "Vasa omiljena boja je plava !";
+        break;
 
     case "green":
-    echo "Vasa omiljena boja je zelena";
-    break;
+        echo "Vasa omiljena boja je zelena";
+        break;
 
     default:
-    echo "Pogresan parametar";
+        echo "Pogresan parametar";
 
 }
 ////////////////////////////
 
 //While i do..while kontrolna struktura
-while ( $a<10 ) {
+while ($a < 10) {
     echo "<b>".$a."</b>";
     $a++;
 }
@@ -109,23 +120,23 @@ do {
     echo $ct;
     $ct++;
 
-} while ($ct<10);
+} while ($ct < 10);
 ///////////////////////////////////////
 
 //For i foreach kontrolna struktura
-for ( $i=0; $i<10; $i++) {
+for ($i = 0; $i < 10; $i++) {
     echo "<b>DUSAN</b><br>";
 }
 
-foreach ( $niz_string as $var) {
+foreach ($niz_string as $var) {
     echo "<b>$var</b><br>";
 
     //Logicki operator (ternarni operator)  ?
     //Izjave NISU void, nego return, potrebno ih je uhvatiti sa echo
-    echo $var==10 ?  ("Broj 10<br>") : ("Nije broj 10<br>");
+    echo $var == 10 ?  ("Broj 10<br>") : ("Nije broj 10<br>");
 }
 
-foreach($niz_assoc as $vrednost=>$kljuc) {
+foreach ($niz_assoc as $vrednost=>$kljuc) {
     echo $vrednost;
     echo $kljuc;
 }
