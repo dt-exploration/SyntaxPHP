@@ -79,7 +79,7 @@ $niz_for_sorting=array(6, 8, 7, 3, 1, 6, 0, 9, 8, 9, 5, 6, 4, 5, 7,
 
 $niz_assoc=array("Rex"=>'26', "Dutja"=>'25', "Ix"=>'24', "Pafi"=>'29');
 
-$matrica=array(array(1,2,3,4,5),array(9,8,7,6,5));
+$matrica=array(array(1,2,3,4,5), array(9,8,7,6,5));
 echo $matrica[1][2];
 
 echo count($niz_integer);
