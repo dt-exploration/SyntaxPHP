@@ -3,8 +3,8 @@
 //Komentari su definisani sa "//" ili #, vise redova: " /*  */ "
 
 //Deklaracija varijabli
-$a=5; $x=10;
-$b="Dusan";
+$a = 5; $x = 10;
+$b = "Dusan";
 
 //Metoda za vreme/datum
 echo "Today is: ".date("l")." ".date("d/m/Y");
@@ -22,11 +22,14 @@ function test()
     echo $x;
 
     //Aritmeticke operacije
-    $n=$x+2; $m=$x-1; $k=$x*10; $l=$x/4;
+    $n = $x+2;
+    $m = $x-1;
+    $k = $x*10;
+    $l = $x/4;
 
     //Moduo i ekxponenti
-    $g=$a%2;
-    $g=$a**2;
+    $g = $a%2;
+    $g = $a**2;
 
     //Konketinacija (implementira se tackom)
     echo "Kvadrat broja je: ".$g;
@@ -115,7 +118,7 @@ while ($a < 10) {
     $a++;
 }
 
-$ct=1;
+$ct = 1;
 do {
     echo $ct;
     $ct++;
