@@ -27,7 +27,7 @@ function test()
     $k = $x*10;
     $l = $x/4;
 
-    //Moduo i ekxponenti
+    //Moduo i eksponenti
     $g = $a%2;
     $g = $a**2;
 
