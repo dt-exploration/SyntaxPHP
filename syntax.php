@@ -31,7 +31,7 @@ function test()
     $g = $a%2;
     $g = $a**2;
 
-    //Konketinacija (implementira se tackom)
+    //Konketinacija (Konkatenacija ?)(implementira se tackom)
     echo "Kvadrat broja je: ".$g;
 
     return 1;
